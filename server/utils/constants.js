@@ -1,0 +1,7 @@
+const UUID_NAMESPACE = '83477430-26f2-11e9-be32-03164dca5e7b';
+const MIN_USERNAME_LENGTH = 6;
+
+module.exports = {
+  UUID_NAMESPACE,
+  MIN_USERNAME_LENGTH,
+};

@@ -1,0 +1,12 @@
+.collection-page-container {
+  display: flex;
+  justify-content: center;
+}
+
+.collection-page {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 120rem;
+  width: 90rem;
+}

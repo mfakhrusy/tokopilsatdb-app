@@ -1,0 +1,104 @@
+@import '~assets/styles/variables/global';
+
+.panel-list-item {
+
+  &.active {
+    .main-link {
+      background-color: $navpanel-dark-color;
+
+      svg[data-icon="angle-left"] {
+        transform: rotate(270deg);
+      }
+    }
+
+    .dropdown-link {
+      display: flex;
+    }
+  }
+
+  &:hover {
+    .dropdown-hover {
+      display: flex;
+    }
+  }
+
+  a, button {
+    color: $color-white;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  button {
+    background-color: inherit;
+    border: none;
+  }
+
+  a:hover {
+    text-decoration: none;
+    color: $color-white;
+  }
+
+  .main-link, .dropdown-link {
+    width: 100%;
+    outline: none;
+  }
+
+  .main-link {
+    display: flex;
+    // min-height: 4rem;
+    height: $navpanel-item-height;
+    align-items: center;
+    padding-right: $navpanel-left-right-padding;
+    padding-left: $navpanel-left-right-padding;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+
+    &:hover {
+      background-color: $navpanel-dark-color;
+    }
+
+    svg:not([data-icon="angle-left"]) {
+      margin-right: 0.8rem;
+      font-size: 1.8rem;
+    }
+
+    svg[data-icon="angle-left"] {
+      font-size: 1.7rem;
+    }
+
+    span.label {
+      display: flex;
+      flex-grow: 1;
+    }
+  }
+
+  .dropdown-link {
+    display: none;
+    padding-right: $navpanel-left-right-padding + 1rem;
+    padding-left: $navpanel-left-right-padding + 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+    &.active {
+      background-color: $navpanel-dark-color;
+    }
+  }
+
+  .dropdown-hover {
+    display: none;
+    background-color: $navpanel-main-color;
+    position: relative;
+    right: -$navpanel-width-not-extended;
+    top: -$navpanel-item-height;
+    min-height: $navpanel-item-height;
+
+    > button {
+      padding-left: 0;
+      padding-right: 0;
+
+      &:hover {
+        background-color: $navpanel-dark-color;
+      }
+    }
+  }
+}

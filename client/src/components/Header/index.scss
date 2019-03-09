@@ -1,0 +1,21 @@
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 7rem;
+  padding: 0 2rem;
+  border-bottom: 1px solid #E0E0E0;
+
+  > div {
+    width: 33%;
+    display: flex;
+  }
+
+  .header-logo {
+    justify-content: center;
+  }
+
+  .header-searchbar {
+    justify-content: flex-end;
+  }
+}

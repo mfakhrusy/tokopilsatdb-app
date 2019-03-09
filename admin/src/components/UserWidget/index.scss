@@ -1,0 +1,15 @@
+@import '~assets/styles/variables/global';
+
+.user-widget {
+  margin: 1rem 0 0 0;
+  color: $color-white;
+  .user-info {
+    display: flex;
+    align-items: center;
+  }
+
+  &.is-extended {
+    padding-right: $navpanel-left-right-padding;
+    padding-left: $navpanel-left-right-padding;
+  }
+}

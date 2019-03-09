@@ -1,0 +1,18 @@
+.check-icon {
+  position: relative;
+  transform: rotate(45deg);
+
+  > .bar {
+    position: absolute;
+    height: 0.1rem;
+
+    &.bar-vertical {
+      transform: rotate(90deg);
+      bottom: 50%;
+    }
+
+    &.bar-horizontal {
+      bottom: 0;
+    }
+  }
+}

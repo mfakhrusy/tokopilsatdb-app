@@ -1,0 +1,73 @@
+0000000000000000000000000000000000000000 ab97c76ba3ee089d5c50bbb9cc925e85405787a0 Muhamad Fakhrusy <v8areu@gmail.com> 1547355015 +0700	clone: from https://github.com/exiffy/tokopilsatdb-app.git
+ab97c76ba3ee089d5c50bbb9cc925e85405787a0 3fef39bdf5fa8e698c7906be30021a10883a54a8 Muhamad Fakhrusy <v8areu@gmail.com> 1549170436 +0700	commit: update post api, db, and things
+3fef39bdf5fa8e698c7906be30021a10883a54a8 89d0148b713aa88766b7dff01e80e1459c612656 Muhamad Fakhrusy <v8areu@gmail.com> 1549232998 +0700	pull origin master: Fast-forward
+89d0148b713aa88766b7dff01e80e1459c612656 dc3f9cfbeab93355aa6e89a8055bdc1a1be96ec7 Muhamad Fakhrusy <v8areu@gmail.com> 1549320086 +0700	commit: update dockerfile + compose and add prod dockerfile + compose
+dc3f9cfbeab93355aa6e89a8055bdc1a1be96ec7 fb5758bc4443e9a46308ed743a208e95f88edf38 Muhamad Fakhrusy <v8areu@gmail.com> 1549321334 +0700	pull origin master: Fast-forward
+fb5758bc4443e9a46308ed743a208e95f88edf38 501aea49f412e3315f7d3e4001f137bf94bccb02 Muhamad Fakhrusy <v8areu@gmail.com> 1549457254 +0700	pull origin master: Fast-forward
+501aea49f412e3315f7d3e4001f137bf94bccb02 d4257a9f5671d9e2b28f7ddaa10bbf2b2b6d1c8e Muhamad Fakhrusy <v8areu@gmail.com> 1549459926 +0700	commit: update env file
+d4257a9f5671d9e2b28f7ddaa10bbf2b2b6d1c8e 701f5fc15a630ccf0ad6e48fbf519b97aa8ba84d Muhamad Fakhrusy <v8areu@gmail.com> 1549461550 +0700	commit: update with eslint
+701f5fc15a630ccf0ad6e48fbf519b97aa8ba84d 158eaef0b384ebafb4fa5be052f332ccb5356661 Muhamad Fakhrusy <v8areu@gmail.com> 1549464732 +0700	commit: add admin app
+158eaef0b384ebafb4fa5be052f332ccb5356661 2c62ffd2003108d3788cc8acc4e1e5f15d067f54 Muhamad Fakhrusy <v8areu@gmail.com> 1549464784 +0700	commit: update docker-thingy for admin
+2c62ffd2003108d3788cc8acc4e1e5f15d067f54 a5da6c9aace81684d0b06a91625039f49d1e62d5 Muhamad Fakhrusy <v8areu@gmail.com> 1549465025 +0700	commit: update nginx conf
+a5da6c9aace81684d0b06a91625039f49d1e62d5 c134953dc779c32e87cf99432cdec9d1bdd6fc36 Muhamad Fakhrusy <v8areu@gmail.com> 1549473939 +0700	commit: update admin app with another boilerplate
+c134953dc779c32e87cf99432cdec9d1bdd6fc36 68fc61d55869dced5702bdb80496b4206d36aa68 Muhamad Fakhrusy <v8areu@gmail.com> 1549474483 +0700	commit: add license file
+68fc61d55869dced5702bdb80496b4206d36aa68 d7b78e4dca94d4a1447310eb6953549891a21c17 Muhamad Fakhrusy <v8areu@gmail.com> 1549672232 +0700	commit: update admin and add some put api
+d7b78e4dca94d4a1447310eb6953549891a21c17 b8df5c37c31571b5397217a91835e0ec682216d4 Muhamad Fakhrusy <v8areu@gmail.com> 1549708781 +0700	commit: go back to js from ts
+b8df5c37c31571b5397217a91835e0ec682216d4 3c4d2bf675e474e8a01cc74f287a10e4ce0e5806 Muhamad Fakhrusy <v8areu@gmail.com> 1549712801 +0700	commit: update redux, react-router, axios on admin, and enable CORS on server
+3c4d2bf675e474e8a01cc74f287a10e4ce0e5806 c1e19fed3256518154f6b50258389ce87f1a275d Muhamad Fakhrusy <v8areu@gmail.com> 1549714781 +0700	commit: update response to object from array
+c1e19fed3256518154f6b50258389ce87f1a275d df43b0b8392330cc10202568e2f7e23e9d36d02c Muhamad Fakhrusy <v8areu@gmail.com> 1549715835 +0700	commit: fix reducer
+df43b0b8392330cc10202568e2f7e23e9d36d02c df67f57dc676852b2a8c5de6c9abbbc041187bdc Muhamad Fakhrusy <v8areu@gmail.com> 1549719734 +0700	commit: change user table name, update rest logic to include first name and last name and sql init script
+df67f57dc676852b2a8c5de6c9abbbc041187bdc 07b64aab01d61894b637a0a03b554d44bf477837 Muhamad Fakhrusy <v8areu@gmail.com> 1549719851 +0700	commit: fix typo and add initial value
+07b64aab01d61894b637a0a03b554d44bf477837 cdb567a19b853b9281a411d99cf9bbb7f2b29ba9 Muhamad Fakhrusy <v8areu@gmail.com> 1549719885 +0700	commit: fix typo and add initial value
+cdb567a19b853b9281a411d99cf9bbb7f2b29ba9 67bc412d2be34be02cdec890b4e26d5dce704131 Muhamad Fakhrusy <v8areu@gmail.com> 1549721609 +0700	commit: add user detail get route
+67bc412d2be34be02cdec890b4e26d5dce704131 510995a91af904c423c527da0b5695d51d2825ef Muhamad Fakhrusy <v8areu@gmail.com> 1549755315 +0700	commit: update sass variables and user get api
+510995a91af904c423c527da0b5695d51d2825ef a62bb4585bf93e6b8cb819abb39f602d6d176f3b Muhamad Fakhrusy <v8areu@gmail.com> 1549756202 +0700	commit: update add some components
+a62bb4585bf93e6b8cb819abb39f602d6d176f3b 68510c77ed0df04724dce5fd3b47f193e608c048 Muhamad Fakhrusy <v8areu@gmail.com> 1549766252 +0700	commit: update user widget
+68510c77ed0df04724dce5fd3b47f193e608c048 6135f89de1747dc6ec566942fc7d1821c8a7fbe9 Muhamad Fakhrusy <v8areu@gmail.com> 1549771232 +0700	commit: update navbar
+6135f89de1747dc6ec566942fc7d1821c8a7fbe9 0e0ef61dfd1ee1d4155f9c3180488e1f08caf6a2 Muhamad Fakhrusy <v8areu@gmail.com> 1549772756 +0700	commit: update company to have theme color
+0e0ef61dfd1ee1d4155f9c3180488e1f08caf6a2 b927661b1441968c53b7053aa3176263d013ba64 Muhamad Fakhrusy <v8areu@gmail.com> 1549772965 +0700	commit: update company to have theme color
+b927661b1441968c53b7053aa3176263d013ba64 5b301c102599e598fbe4e9b4f739cb7b5be55e25 Muhamad Fakhrusy <v8areu@gmail.com> 1549780334 +0700	commit: add theme and wrapper component
+5b301c102599e598fbe4e9b4f739cb7b5be55e25 102d950c4016bea9f568db4a9cbd859625bd2ebc Muhamad Fakhrusy <v8areu@gmail.com> 1549785314 +0700	commit: update themeColor with chroma-js
+102d950c4016bea9f568db4a9cbd859625bd2ebc 6f6c231bf305d24dc76d23f8a0f15b3b9c78b8cf Muhamad Fakhrusy <v8areu@gmail.com> 1549807721 +0700	commit: implement simple auth wip
+6f6c231bf305d24dc76d23f8a0f15b3b9c78b8cf a4cf8e3ae14cec0064c54642013f2d55cde46d58 Muhamad Fakhrusy <v8areu@gmail.com> 1549811151 +0700	commit: add jwt token to login controller
+a4cf8e3ae14cec0064c54642013f2d55cde46d58 fbfa791ba9e8ee6e2472ace492701e5b06e18a5c Muhamad Fakhrusy <v8areu@gmail.com> 1549821169 +0700	commit: implement login page wip
+fbfa791ba9e8ee6e2472ace492701e5b06e18a5c ff343aed1547802f95f72141657d236a1eda437e Muhamad Fakhrusy <v8areu@gmail.com> 1549882669 +0700	commit: fix login function
+ff343aed1547802f95f72141657d236a1eda437e a4f41fced9f02e9eb3a723a446954db6b34cf509 Muhamad Fakhrusy <v8areu@gmail.com> 1549888559 +0700	commit: style login page
+a4f41fced9f02e9eb3a723a446954db6b34cf509 a36c1ebcebde21f6b53a232b8461c90bffb6f8a4 Muhamad Fakhrusy <v8areu@gmail.com> 1549892931 +0700	commit: add login state persistance with cookies, but still need to check the token to server
+a36c1ebcebde21f6b53a232b8461c90bffb6f8a4 6776a5b840255a18d8b2e78c1915819bf4a9ebee Muhamad Fakhrusy <v8areu@gmail.com> 1549981736 +0700	commit: add error handling on login method
+6776a5b840255a18d8b2e78c1915819bf4a9ebee a808a0d73d2267a2f895e9d3de4e5aac60edcce4 Muhamad Fakhrusy <v8areu@gmail.com> 1549982427 +0700	commit: extract component LoginForm
+a808a0d73d2267a2f895e9d3de4e5aac60edcce4 4a00fc771f17f63d18cb4b07dd3ff2fe61428038 Muhamad Fakhrusy <v8areu@gmail.com> 1550004660 +0700	commit: update admin page
+4a00fc771f17f63d18cb4b07dd3ff2fe61428038 4f779421e5b0946de244a385f5f408a25c532d5d Muhamad Fakhrusy <v8areu@gmail.com> 1550071554 +0700	commit: update navpanel
+4f779421e5b0946de244a385f5f408a25c532d5d d4888356a534c3fd09906f702b3aed05bc7d7b45 Muhamad Fakhrusy <v8areu@gmail.com> 1550079785 +0700	commit: add routing login
+d4888356a534c3fd09906f702b3aed05bc7d7b45 28c4f880eb8adf131bbadf9f2e49a06ba9286fee Muhamad Fakhrusy <v8areu@gmail.com> 1550151967 +0700	commit: update routing
+28c4f880eb8adf131bbadf9f2e49a06ba9286fee 623991124bbec4b5951c8122fa17e8cacfc0a168 Muhamad Fakhrusy <v8areu@gmail.com> 1550153110 +0700	commit: update rootPath and minor styling
+623991124bbec4b5951c8122fa17e8cacfc0a168 930308780afd24a3c33b5893a225afd51c40a7f1 Muhamad Fakhrusy <v8areu@gmail.com> 1550160010 +0700	commit: update extendedNavPanel
+930308780afd24a3c33b5893a225afd51c40a7f1 868d4666e406cbafe59418b09cdea245abafd08b Muhamad Fakhrusy <v8areu@gmail.com> 1550161026 +0700	commit: update extendedNavPanel again
+868d4666e406cbafe59418b09cdea245abafd08b 1efd06f7734c3fe182d59524e2e828acdc631810 Muhamad Fakhrusy <v8areu@gmail.com> 1550282550 +0700	commit: update routing
+1efd06f7734c3fe182d59524e2e828acdc631810 c59f2facdfe813ba02a45a9d7aaac129194e4f9d Muhamad Fakhrusy <v8areu@gmail.com> 1550312980 +0700	commit: update nav panel style
+c59f2facdfe813ba02a45a9d7aaac129194e4f9d 434cea1fb46938111555a11ca569056ac10e0fcb Muhamad Fakhrusy <v8areu@gmail.com> 1550324949 +0700	commit: add insert image widget to collection
+434cea1fb46938111555a11ca569056ac10e0fcb 15b997bb51b357b36de23748d966f4d2cc77c268 Muhamad Fakhrusy <v8areu@gmail.com> 1550330641 +0700	commit: update add new collection (wait for backend to be ready)
+15b997bb51b357b36de23748d966f4d2cc77c268 3b274cd02f8b4b24b13f81a6bcee6e906d50b400 Muhamad Fakhrusy <v8areu@gmail.com> 1550397749 +0700	commit: update upload image to node js
+3b274cd02f8b4b24b13f81a6bcee6e906d50b400 1957c80008a50383225f02114632acfdf19a741c Muhamad Fakhrusy <v8areu@gmail.com> 1550548492 +0700	commit: update login schema and ui
+1957c80008a50383225f02114632acfdf19a741c 392eb6965445c83102bb5a338c8c81548b016be3 Muhamad Fakhrusy <v8areu@gmail.com> 1550548551 +0700	commit: update docker compose for dev
+392eb6965445c83102bb5a338c8c81548b016be3 f94039d070b3d53820714bf48f56997709d7b8b0 Muhamad Fakhrusy <v8areu@gmail.com> 1550555689 +0700	commit: update from CRA -> custom webpack
+f94039d070b3d53820714bf48f56997709d7b8b0 3a14d4a58f329787c5b58dc942010fbf9a96bbc7 Muhamad Fakhrusy <v8areu@gmail.com> 1550555781 +0700	commit: update gitignore
+3a14d4a58f329787c5b58dc942010fbf9a96bbc7 3ab4fff38ccacc7ce391902deb3c8125ebd34e54 Muhamad Fakhrusy <v8areu@gmail.com> 1550571206 +0700	commit: update eslint
+3ab4fff38ccacc7ce391902deb3c8125ebd34e54 de7e8f42347fa552f4e6c8f609c8278ed3ce2dc8 Muhamad Fakhrusy <v8areu@gmail.com> 1550571705 +0700	commit: update sass-loader
+de7e8f42347fa552f4e6c8f609c8278ed3ce2dc8 ad0fe0f7938bb3297e688c4f3fd93501dfcd3082 Muhamad Fakhrusy <v8areu@gmail.com> 1550572667 +0700	commit: update docs
+ad0fe0f7938bb3297e688c4f3fd93501dfcd3082 a75f6a7a1568d57c8b410a3d187ae2b469c3eb1d Muhamad Fakhrusy <v8areu@gmail.com> 1550576366 +0700	commit: update routing
+a75f6a7a1568d57c8b410a3d187ae2b469c3eb1d 5503efb76e78deebfddfdbc36fa3344e77e17b91 Muhamad Fakhrusy <v8areu@gmail.com> 1550601628 +0700	commit: update passed jest with ditching emotion and installing styled-components instead
+5503efb76e78deebfddfdbc36fa3344e77e17b91 66a9d65713736df496752cdf1b6cf08f0b4e00cd Muhamad Fakhrusy <v8areu@gmail.com> 1551016069 +0700	commit: update add collection API
+66a9d65713736df496752cdf1b6cf08f0b4e00cd 7473cb9e66f6dc74e60b0c969cd15e734b0fb2dd Muhamad Fakhrusy <v8areu@gmail.com> 1551016110 +0700	commit: update sql init script
+7473cb9e66f6dc74e60b0c969cd15e734b0fb2dd 44b1aba10e5f0e811087990e154aed84386272f9 Muhamad Fakhrusy <v8areu@gmail.com> 1551211656 +0700	commit: update client
+44b1aba10e5f0e811087990e154aed84386272f9 f1ef06bf0fd2b63d87b66bb0946c0d5edc7c38dd Muhamad Fakhrusy <v8areu@gmail.com> 1551218179 +0700	commit: update client
+f1ef06bf0fd2b63d87b66bb0946c0d5edc7c38dd 012379d8669cf5cc4f4188e328de9c116f198c19 Muhamad Fakhrusy <v8areu@gmail.com> 1551221974 +0700	commit: add routes
+012379d8669cf5cc4f4188e328de9c116f198c19 94990fdee47f1bc6c5250b9ff3b8950cc5dc3d0c Muhamad Fakhrusy <v8areu@gmail.com> 1551270724 +0700	commit: get collection list api
+94990fdee47f1bc6c5250b9ff3b8950cc5dc3d0c 39dbcdbeb402859bd2b776e1a5894549afb7b3e0 Muhamad Fakhrusy <v8areu@gmail.com> 1551280884 +0700	commit: add prop types for collection list
+39dbcdbeb402859bd2b776e1a5894549afb7b3e0 f6975b9a98149580a8f6c2860bfd975f0e17d029 Muhamad Fakhrusy <v8areu@gmail.com> 1551285254 +0700	commit: update add http protocol to url (todo change to https)
+f6975b9a98149580a8f6c2860bfd975f0e17d029 0d9b8f5b4fb0e83097dfb4d78a25dfa61f611ab6 Muhamad Fakhrusy <v8areu@gmail.com> 1551288987 +0700	commit: add collection item
+0d9b8f5b4fb0e83097dfb4d78a25dfa61f611ab6 6e91ee702d6cc73f2f1ab4853c0a0fd45abe72c3 Muhamad Fakhrusy <v8areu@gmail.com> 1551498361 +0700	commit: add resize feature admin upload collection
+6e91ee702d6cc73f2f1ab4853c0a0fd45abe72c3 bad95357210f291b87c36b343903c3a10b249c54 Muhamad Fakhrusy <v8areu@gmail.com> 1551588639 +0700	commit: update collection modal
+bad95357210f291b87c36b343903c3a10b249c54 7fc0e17b206756b03997a33b48fab06814414dec Muhamad Fakhrusy <v8areu@gmail.com> 1551588746 +0700	commit: update docker compose and routes collection
+7fc0e17b206756b03997a33b48fab06814414dec 6913243c3800ef95ed7ad19027b1c5137ffbebc0 Muhamad Fakhrusy <v8areu@gmail.com> 1551597360 +0700	commit: style collection page
+6913243c3800ef95ed7ad19027b1c5137ffbebc0 d39701b6fd3dd753c74f18ef582c9ff60d01bff8 Muhamad Fakhrusy <v8areu@gmail.com> 1551624893 +0700	commit: add collection table

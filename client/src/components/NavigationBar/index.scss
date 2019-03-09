@@ -1,0 +1,11 @@
+.navigationbar {
+  display: flex;
+  justify-content: center;
+  > ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    width: 60%;
+    padding: 0 3rem;
+  }
+}

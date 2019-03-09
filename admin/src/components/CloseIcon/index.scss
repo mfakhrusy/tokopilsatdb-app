@@ -1,0 +1,31 @@
+.close-icon {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:focus {
+    outline: none;
+  }
+  &:not(.button) {
+    cursor: default;
+  }
+
+  &.button {
+    cursor: pointer;
+  }
+  > .bar {
+    position: absolute;
+    height: 0.1rem;
+
+    &:first-child {
+      transform: rotate(45deg);
+    }
+
+    &:last-child {
+      transform: rotate(-45deg);
+    }
+  }
+}

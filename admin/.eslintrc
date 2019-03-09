@@ -1,0 +1,10 @@
+{
+  "plugins": [
+    "react",
+    "import"
+  ],
+  "extends": "react-app",
+  "rules": {
+    "semi": ["error", "always"]
+  }
+}

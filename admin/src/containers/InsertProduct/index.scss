@@ -1,0 +1,45 @@
+.insert-product-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 3rem 0;
+  .insert-product {
+    border: 1px solid #e0e0e0;
+    width: 80%;
+    height: 100%;
+
+    .product-thumbnail {
+      width: 100%;
+    }
+
+    h2 {
+      font-weight: 600;
+    }
+
+    > header {
+      height: 5rem;
+      padding: 1.5rem;
+    }
+
+    > section {
+      padding: 1.5rem;
+    }
+
+    > footer {
+      padding: 1.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      button {
+        height: 4rem;
+        width: 10rem;
+        font-size: 1.4rem;
+
+        &.disabled {
+          cursor: not-allowed;
+        }
+      }
+    }
+  }
+}

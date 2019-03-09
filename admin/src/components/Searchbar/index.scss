@@ -1,0 +1,41 @@
+@import '~assets/styles/variables/global';
+
+.searchbar {
+  display: flex;
+  justify-content: center;
+  margin: 1.5rem 0;
+  height: 4.2rem;
+
+  form {
+    width: 20rem;
+    input {
+      font-size: 1.5rem;
+      width: 100%;
+      background-color: $searchbar-color;
+      border: none;
+      color: $color-white;
+      padding: 1rem;
+      border-top-left-radius: $searchbar-border-radius;
+      border-bottom-left-radius: $searchbar-border-radius;
+      outline: none;
+    }
+  }
+
+  .search-icon {
+    display: flex;
+    align-items: center;
+    background-color: $searchbar-color;
+    padding: 0 1rem;
+    border-top-right-radius: $searchbar-border-radius;
+    border-bottom-right-radius: $searchbar-border-radius;
+    font-size: 1.5rem;
+  }
+  
+  &.is-not-extended {
+    .search-icon {
+      border-top-left-radius: $searchbar-border-radius;
+      border-bottom-left-radius: $searchbar-border-radius;
+      cursor: pointer;
+    }
+  }
+}

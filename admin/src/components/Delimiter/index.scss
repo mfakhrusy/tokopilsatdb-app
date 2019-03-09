@@ -1,0 +1,12 @@
+@import '~assets/styles/variables/global';
+
+.delimiter {
+  color: #ababab;
+  background-color: #1A2226;
+  height: 3.5rem;
+  font-size: $font-size-normal;
+  display: flex;
+  align-items: center;
+  padding-left: $navpanel-left-right-padding;
+  padding-right: $navpanel-left-right-padding;
+}

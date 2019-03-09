@@ -1,0 +1,12 @@
+@import '~assets/styles/variables/global';
+
+.panel-list {
+  color: $color-white;
+  font-size: $font-size-normal;
+  margin-top: 1rem;
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+}

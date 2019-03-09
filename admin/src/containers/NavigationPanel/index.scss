@@ -1,0 +1,23 @@
+@import '~assets/styles/variables/global';
+
+.navigation-panel {
+  background-color: $navpanel-main-color;
+  min-height: 100vh;
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+      height: $navbar-height;
+    h2 {
+      color: $color-white;
+    }
+
+  }
+  &.extended {
+    width: $navpanel-width;
+  }
+
+  &.not-extended {
+    width: $navpanel-width-not-extended;
+  }
+}

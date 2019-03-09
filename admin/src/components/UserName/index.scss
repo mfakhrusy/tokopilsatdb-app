@@ -1,0 +1,10 @@
+@import '~assets/styles/variables/global';
+
+.user-name {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  font-weight: 550;
+  font-size: 1.6rem;
+}
+

@@ -1,0 +1,25 @@
+.searchbar-container {
+  display: flex;
+  align-items: center;
+
+  > form {
+    border: 1px solid rgb(185, 185, 185);
+    border-right: none;
+    outline: none;
+    height: 35px;
+
+    > input {
+      height: 100%;
+      padding: 0.7rem;
+      border: none;
+    }
+  }
+  .search-icon {
+    padding: 0.7rem;
+    border: 1px solid rgb(185, 185, 185);
+    border-left: 0;
+    height: 35px;
+    display: flex;
+    align-items: center;
+  }
+}

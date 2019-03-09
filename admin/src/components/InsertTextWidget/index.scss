@@ -1,0 +1,17 @@
+@import '~assets/styles/variables/global';
+
+.insert-text-widget {
+  form {
+    display: flex;
+    label {
+      width: $form-label-width;
+    }
+    input, textarea {
+      flex-grow: 1;
+    }
+
+    textarea {
+      resize: none;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+.collection-table {
+  width: 90rem;
+
+  .ReactTable {
+    .rt-td {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

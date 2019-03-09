@@ -1,0 +1,23 @@
+FROM node:alpine
+
+RUN mkdir -p /srv/app/tokopilsatdb-client
+WORKDIR /srv/app/tokopilsatdb-client
+ENV PATH /srv/app/tokopilsatdb-client/node_modules/.bin:$PATH
+
+COPY package.json /srv/app/tokopilsatdb-client/
+COPY yarn.lock /srv/app/tokopilsatdb-client/
+
+RUN npm -g install yarn
+RUN yarn install
+
+COPY . /srv/app/tokopilsatdb-client
+
+# CMD ["yarn", "build"]
+RUN yarn build
+
+COPY ./build /srv/app/tokopilsatdb-client
+
+RUN yarn global add http-server
+
+EXPOSE 3001
+CMD ["http-server", "./build", "-p", "3001"]

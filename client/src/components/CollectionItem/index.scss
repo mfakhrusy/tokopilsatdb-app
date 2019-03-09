@@ -1,0 +1,30 @@
+.collection-item {
+  height: 25rem;
+  width: 25rem;
+  padding: 1rem;
+  margin: 1rem;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  .img-container {
+    height: 15rem;
+    border-radius: 0.5rem;
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 0.5rem;
+    }  
+  }
+
+  .label {
+    display: flex;
+    justify-content: center;
+  }
+}

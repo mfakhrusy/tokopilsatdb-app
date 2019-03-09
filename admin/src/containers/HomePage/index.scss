@@ -1,0 +1,10 @@
+.homepage {
+  display: flex;
+  min-height: 100vh;
+
+  main.content {
+    flex-grow: 1;
+    // overflow: auto;
+    font-size: 1.4rem;
+  }
+}
