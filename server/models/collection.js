@@ -1,4 +1,6 @@
+const db = require('./db');
 const utils = require('./utils');
+const productModels = require('./product');
 const tableName = 'store_collection';
 
 const getAllId = () => {
@@ -15,6 +17,25 @@ const getAllFilename = () => {
 
 const getCollectionFilename = (filename) => {
   return utils.getColumnFromTable('file_name', tableName, filename);
+};
+
+const getIdByCollectionId = async (collectionId) => {
+  try {
+    const result = await db.any(`SELECT id FROM ${tableName} WHERE collection_id = $1`, [collectionId]);
+    return result;
+  } catch(e) {
+    console.log(e); // eslint-disable-line no-console
+    return { status: 'error', error: true, message: 'Failed to fetch from table' };
+  }
+};
+
+const updateItemsCountById = async (id) => {
+  try {
+    const productCountById = await productModels.countProductByCollectionId(id);
+    await db.none(`UPDATE ${tableName} SET items_count = $1 WHERE id = $2`, [productCountById + 1, id]);
+  } catch(e) {
+    return { status: 'error', error: true, message: 'Failed to fetch from table' };
+  }
 };
 
 const insertCollectionTable = (values) => {
@@ -43,4 +64,6 @@ module.exports = {
   getCollectionFilename,
   insertCollectionTable,
   getCollectionList,
+  getIdByCollectionId,
+  updateItemsCountById,
 };

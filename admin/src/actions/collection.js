@@ -1,8 +1,8 @@
 import { get } from 'lodash';
 
 import * as api from 'config/api';
-import * as CONST from 'utils/actionTypes/collection';
 import * as MISC_ACT from 'actions/misc';
+import * as CONST from 'utils/actionTypes/collection';
 
 export const getCollectionList = () => {
   return async (dispatch) => {

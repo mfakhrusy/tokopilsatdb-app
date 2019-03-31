@@ -5,7 +5,7 @@ import * as COMPANY_ACT from 'actions/company';
 import * as AUTH_ACT from 'actions/auth';
 
 import { companyUrl, rootPath } from 'config/config';
-import { authTypes } from 'utils/typings';
+import { authTypes } from 'utils/types/auth';
 
 import Routes from './routes';
 

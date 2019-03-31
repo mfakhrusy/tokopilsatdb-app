@@ -21,7 +21,7 @@ const upload = multer({ storage });
 router.post('/add', upload.single('file'), async (req, res) => {
 
   const dateNow = new Date();
-  const { status, message } = await controllers.addproduct(req.file, req.body, dateNow);
+  const { status, message } = await controllers.addProduct(req.file, req.body, dateNow);
   
   res.status(status).send({ message });
 });

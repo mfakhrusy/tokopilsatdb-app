@@ -3,8 +3,10 @@
 .insert-text-widget {
   form {
     display: flex;
+    align-items: center;
     label {
       width: $form-label-width;
+      margin: 0;
     }
     input, textarea {
       flex-grow: 1;

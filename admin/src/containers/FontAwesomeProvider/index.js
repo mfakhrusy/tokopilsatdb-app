@@ -21,7 +21,7 @@ library.add(
   faStoreAlt,
   faShoppingCart,
   faDolly,
-  );
+);
 
 class FontAwesomeProvider extends Component {
   render() {

@@ -4,7 +4,7 @@ import HomePage from 'containers/HomePage';
 import LoginPage from 'containers/LoginPage';
 
 import { rootPath } from 'config/config';
-import { authTypes } from 'utils/typings';
+import { authTypes } from 'utils/types/auth';
 
 class Routes extends Component {
   render() {

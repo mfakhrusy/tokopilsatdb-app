@@ -32,8 +32,8 @@ class PanelList extends Component {
             faIcon="shopping-cart"
             to="/collection"
             dropdown={[
-                { label: 'New Collection', to: '/add' },
-              ]}
+              { label: 'New Collection', to: '/add' },
+            ]}
           />
         </ul>
       </div>

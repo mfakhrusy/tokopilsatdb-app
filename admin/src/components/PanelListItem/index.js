@@ -29,20 +29,20 @@ class PanelListItem extends Component {
     changeLocationNavigationPanel(location.pathname);
   }
 
- handleClickPanelItem(e) {
-   const {
-     history,
-     match,
-     to,
-     changeLocationNavigationPanel,
-   } = this.props;
+  handleClickPanelItem(e) {
+    const {
+      history,
+      match,
+      to,
+      changeLocationNavigationPanel,
+    } = this.props;
 
-   const dropdownRoute = get(e, 'target.dataset.route', undefined);
-   const targetRoute = !isEmpty(dropdownRoute) ? `${match.path}${to}${dropdownRoute}` : `${match.path}${to}`;
+    const dropdownRoute = get(e, 'target.dataset.route', undefined);
+    const targetRoute = !isEmpty(dropdownRoute) ? `${match.path}${to}${dropdownRoute}` : `${match.path}${to}`;
 
-   changeLocationNavigationPanel(targetRoute);
-   history.push(targetRoute);
- }
+    changeLocationNavigationPanel(targetRoute);
+    history.push(targetRoute);
+  }
   
   render() {
     const {

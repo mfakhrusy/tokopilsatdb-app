@@ -10,7 +10,7 @@ import InsertImageWidget from 'components/InsertImageWidget';
 import InsertTextWidget from 'components/InsertTextWidget';
 import ModalInfo from 'components/ModalInfo';
 
-import { formDataTypes } from 'utils/typings';
+import { formCollectionTypes } from 'utils/types/collection';
 
 import './index.scss';
 
@@ -47,6 +47,7 @@ class InsertCollection extends Component {
             <InsertTextWidget
               label="Collection Label"
               onInsertText={setFormCollectionLabel}
+              type="collection_label"
             />
           </section>
           <footer>
@@ -66,7 +67,9 @@ class InsertCollection extends Component {
 
 InsertCollection.propTypes = {
   uploadFormCollection: PropTypes.func.isRequired,
-  formCollection: formDataTypes.isRequired,
+  setFormCollectionMedia: PropTypes.func.isRequired,
+  setFormCollectionLabel: PropTypes.func.isRequired,
+  formCollection: formCollectionTypes.isRequired,
 };
 
 const mapStateToProps = (state) => {

@@ -9,20 +9,20 @@ const initialState = {
 
 const auth = (state = initialState, action) => {
   switch(action.type) {
-    case CONST.LOGIN_SUCCESS: {
-      const { message, status } = action;
-      return Object.assign({}, state, { message, isAuthenticated: true, status });
-    }
-    case CONST.LOGIN_FAILED: {
-      const { message, status } = action;
-      return Object.assign({}, state, { message, isAuthenticated: false, status });
-    }
-    case CONST.CHECK_AUTH: {
-      const { message } = action;
-      return Object.assign({}, state, { message, isAuthenticated: true });
-    }
-    default:
-      return state;
+  case CONST.LOGIN_SUCCESS: {
+    const { message, status } = action;
+    return Object.assign({}, state, { message, isAuthenticated: true, status });
+  }
+  case CONST.LOGIN_FAILED: {
+    const { message, status } = action;
+    return Object.assign({}, state, { message, isAuthenticated: false, status });
+  }
+  case CONST.CHECK_AUTH: {
+    const { message } = action;
+    return Object.assign({}, state, { message, isAuthenticated: true });
+  }
+  default:
+    return state;
   }
 };
 

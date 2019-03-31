@@ -2,7 +2,7 @@ const express = require('express');
 const mkdirp = require('mkdirp');
 const router = express.Router();
 const multer  = require('multer');
-const models = require ('../modals').collection;
+const models = require ('../models').collection;
 const controllers = require('../controllers').collection;
 
 const storage = multer.diskStorage({

@@ -1,0 +1,28 @@
+@import '~assets/styles/variables/global';
+
+.login-form {
+  margin-top: 5rem;
+  width: 25rem;
+  display: flex;
+  flex-direction: column;
+
+  input {
+    height: 3.5rem;
+    margin-bottom: 1.5rem;
+    padding: 0.8rem;
+    border-top-right-radius: 0.5rem;
+    border-top-left-radius: 0.5rem;
+    border: none;
+    border-bottom: 0.1rem solid #9b9b9b;
+    background-color: #e9e9e9;
+    outline: none;
+    color: #000000;
+    font-size: 1.2rem;
+  }
+
+  button {
+    margin-top: 2.5rem;
+    color: $color-white;
+    font-size: 1.3rem;
+  }
+}

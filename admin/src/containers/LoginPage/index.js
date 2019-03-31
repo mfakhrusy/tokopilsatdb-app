@@ -5,6 +5,8 @@ import { withRouter } from 'react-router-dom';
 import styled from 'styled-components';
 import { Alert } from 'reactstrap';
 import { HTTP_STATUS_OK } from 'utils/constants';
+import { companyDetailTypes } from 'utils/types/company';
+import { authTypes } from 'utils/types/auth';
 
 import LoginForm from 'components/LoginForm';
 
@@ -25,10 +27,6 @@ class LoginPage extends Component {
       username: '',
       password: '',
     };
-
-    this.onChangeUsername = this.onChangeUsername.bind(this);
-    this.onChangePassword = this.onChangePassword.bind(this);
-    this.onSubmitLogin = this.onSubmitLogin.bind(this);
   }
 
   componentDidMount() {
@@ -49,15 +47,15 @@ class LoginPage extends Component {
     }
   }
   
-  onChangeUsername(e) {
+  onChangeUsername = (e) => {
     this.setState({ username: e.target.value });
   }
 
-  onChangePassword(e) {
+  onChangePassword = (e) => {
     this.setState({ password: e.target.value });
   }
 
-  onSubmitLogin(e) {
+  onSubmitLogin = (e) => {
     const { login, history } = this.props;
     const { username, password } = this.state;
 
@@ -75,9 +73,7 @@ class LoginPage extends Component {
       <div className="login-page">
         <Container className="login-container" color={companyDetail.theme_color}>
           <header>
-            <h2>
-              {companyDetail.company_name}
-            </h2>
+            <h2>{companyDetail.company_name}</h2>
           </header>
           <main>
             <LoginForm
@@ -91,12 +87,12 @@ class LoginPage extends Component {
             <div className="alert-container">
               {
                 auth.status === HTTP_STATUS_OK
-                ? null
-                : (
-                  <Alert color="danger">
-                    {auth.message}
-                  </Alert>
-                )
+                  ? null
+                  : (
+                    <Alert color="danger">
+                      {auth.message}
+                    </Alert>
+                  )
               }
             </div>
           </main>
@@ -108,12 +104,9 @@ class LoginPage extends Component {
 
 LoginPage.propTypes = {
   login: PropTypes.func.isRequired,
-  companyDetail: PropTypes.object,
+  companyDetail: companyDetailTypes.isRequired,
   history: PropTypes.object.isRequired,
-};
-
-LoginPage.defaultProps = {
-  companyDetail: {},
+  auth: authTypes.isRequired,
 };
 
 const mapStateToProps = (state) => {

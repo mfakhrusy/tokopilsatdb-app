@@ -4,6 +4,7 @@
   align-items: center;
   height: 100%;
   padding: 3rem 0;
+
   .insert-collection {
     border: 1px solid #e0e0e0;
     width: 80%;
@@ -17,20 +18,21 @@
       font-weight: 600;
     }
 
-    > header {
+    >header {
       height: 5rem;
       padding: 1.5rem;
     }
 
-    > section {
+    >section {
       padding: 1.5rem;
     }
 
-    > footer {
+    >footer {
       padding: 1.5rem;
       display: flex;
       justify-content: center;
       align-items: center;
+
       button {
         height: 4rem;
         width: 10rem;

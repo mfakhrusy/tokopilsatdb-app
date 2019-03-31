@@ -1,5 +1,5 @@
 const crypto = require('crypto');
-const models = require ('../modals').collection;
+const models = require ('../models').collection;
 const {
   checkUnique,
   generateFilename,

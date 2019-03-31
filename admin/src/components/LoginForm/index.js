@@ -1,11 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
 import { Button } from 'reactstrap';
 
-const ThemedButton = styled(Button)`
-  background-color: ${props => props.color};
-`;
+import './index.scss';
 
 class LoginForm extends Component {
   render() {
@@ -19,7 +16,7 @@ class LoginForm extends Component {
     } = this.props;
 
     return (
-      <form onSubmit={onSubmitLogin}>
+      <form onSubmit={onSubmitLogin} className="login-form">
         <input
           type="text"
           placeholder="Username"
@@ -32,12 +29,15 @@ class LoginForm extends Component {
           value={password}
           onChange={onChangePassword}
         />
-        <ThemedButton
+        <Button
           type="submit"
           color={companyDetail.theme_color}
+          style={{
+            backgroundColor: `${companyDetail.theme_color}`
+          }}
         >
           Log In
-        </ThemedButton>
+        </Button>
       </form>
     );
   }

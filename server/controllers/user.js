@@ -1,6 +1,6 @@
 const crypto = require('crypto');
 const uuidv5 = require('uuid/v5'); // generate sha-1 from unique name (hash)
-const modals = require('../modals').user;
+const models = require('../models').user;
 const { isEmpty } = require('lodash');
 const { UUID_NAMESPACE, MIN_USERNAME_LENGTH } = require ('../utils/constants');
 const {
@@ -10,10 +10,10 @@ const {
 } = require('./utils');
 
 const userAdd = async (username, email, password, firstName, lastName, dateNow) => {
-  const allId = await modals.getAllId();
-  const allUsername = await modals.getAllUsername();
-  const allEmail = await modals.getAllEmail();
-  const allSalt = await modals.getAllSalt();
+  const allId = await models.getAllId();
+  const allUsername = await models.getAllUsername();
+  const allEmail = await models.getAllEmail();
+  const allSalt = await models.getAllSalt();
 
   if (!checkUnique(username, allUsername.map((item) => item.username))) {
     return { status: 409, message: 'Username already existed.' };
@@ -35,7 +35,7 @@ const userAdd = async (username, email, password, firstName, lastName, dateNow) 
   const passwordHash = generatePasswordHash(password, salt);
   const id = allId.length === 0 ? 1 : allId[allId.length - 1].id + 1;
 
-  modals.insertUserTable({
+  models.insertUserTable({
     id,
     user_id: userId,
     username,
@@ -53,7 +53,7 @@ const userAdd = async (username, email, password, firstName, lastName, dateNow) 
 
 const getUserDetail = async (userId) => {
 
-  const userDetail = await modals.getUserDetail(userId);
+  const userDetail = await models.getUserDetail(userId);
 
   if (isEmpty(userDetail)) {
     return { status: 404, message: 'User detail not found' };

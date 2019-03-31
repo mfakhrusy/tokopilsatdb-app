@@ -14,17 +14,17 @@ const initialState = {
 
 const modalInfo = (state = initialState.modal.info, action) => {
   switch (action.type) {
-    case CONST.SHOW_MODAL_INFO: {
-      const { payload } = action;
-      return Object.assign({}, state, { show: payload });
-    }
-    case CONST.SET_MODAL_INFO_LOADING: {
-      const { payload } = action;
-      return Object.assign({}, state, { loading: payload });
-    }
-    default: {
-      return state;
-    }
+  case CONST.SHOW_MODAL_INFO: {
+    const { payload } = action;
+    return Object.assign({}, state, { show: payload });
+  }
+  case CONST.SET_MODAL_INFO_LOADING: {
+    const { payload } = action;
+    return Object.assign({}, state, { loading: payload });
+  }
+  default: {
+    return state;
+  }
   }
 };
 

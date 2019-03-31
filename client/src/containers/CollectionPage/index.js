@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import * as COLLECTION_ACT from 'actions/collection';
 
-import { collectionListTypes } from 'utils/typings';
+import { collectionListTypes } from 'utils/types';
 
 import CollectionItem from 'components/CollectionItem';
 

@@ -44,18 +44,19 @@ export const getCollectionList = () => (
 
 export const addProduct = ({
   media,
-  productName,
-  productDescription,
+  name,
+  description,
   collectionId,
   price,
 }) => {
   let data = new FormData();
 
   data.append('file', media);
-  data.append('productName', productName);
-  data.append('productDescription', productDescription);
+  data.append('productName', name);
+  data.append('productDescription', description);
   data.append('collectionId', collectionId);
   data.append('price', price);
+
   return axios.post(`${apiUrl}/product/add`, data)
     .then((response) => response)
     .catch((error) => ({ details: error, error: true }));

@@ -1,11 +1,12 @@
 const crypto = require('crypto');
-const models = require ('../modals').product;
+const { SITE_URL, publicDir } = require('../utils/config');
+const models = require('../models').product;
+const collectionModels = require('../models/collection');
 const {
   checkUnique,
   generateFilename,
 } = require('./utils');
 
-const { SITE_URL, publicDir } = require('../utils/config');
 // body: { productName, productDescription, price, collectionId }
 const addProduct = async (imgFile, body, dateNow) => {
   const allId = await models.getAllId();
@@ -19,6 +20,7 @@ const addProduct = async (imgFile, body, dateNow) => {
   }
 
   const collectionId = body.collectionId;
+  const foreignKeyCollectionId = await collectionModels.getIdByCollectionId(collectionId);
   const productName = body.productName;
   const productDescription = body.productDescription;
   const price = body.price;
@@ -31,7 +33,7 @@ const addProduct = async (imgFile, body, dateNow) => {
 
   models.insertProductTable({
     id,
-    collection_id: collectionId,
+    collection_id: foreignKeyCollectionId[0].id,
     product_id: productId,
     product_name: productName,
     product_description: productDescription,
@@ -41,7 +43,11 @@ const addProduct = async (imgFile, body, dateNow) => {
     creation_date: dateNow,
   });
 
-  return { status: 200, message: 'Collection Added Successfully' };
+  // update items count on collection table
+
+  collectionModels.updateItemsCountById(foreignKeyCollectionId[0].id);
+
+  return { status: 200, message: 'Product Added Successfully' };
 };
 
 const generateUrl = (path) => {

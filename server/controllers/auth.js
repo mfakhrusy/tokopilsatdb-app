@@ -1,6 +1,6 @@
 const { isEmpty } = require('lodash');
-const models = require('../modals').auth;
-const userModels = require('../modals').user;
+const models = require('../models').auth;
+const userModels = require('../models').user;
 const {
   generatePasswordHash,
   generateToken

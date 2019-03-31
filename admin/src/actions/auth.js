@@ -32,7 +32,7 @@ export const checkAuth = () => {
     const userId = Cookies.get('user_id');
     if (!isEmpty(token)) {
       await dispatch(getUserDetail(userId, token));
-      await dispatch({ type: CONST.CHECK_AUTH });
+      await dispatch({ type: CONST.CHECK_AUTH, message: '' });
     }
   };
 };

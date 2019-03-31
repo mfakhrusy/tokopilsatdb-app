@@ -9,12 +9,12 @@ const initialState = {
 
 const userDetail = (state = initialState, action) => {
   switch (action.type) {
-    case GET_USER_DETAIL_SUCCESS:
-      return action.payload;
-    case GET_USER_DETAIL_FAILED:
-      return { error: true, message: action.message };
-    default:
-      return state;
+  case GET_USER_DETAIL_SUCCESS:
+    return action.payload;
+  case GET_USER_DETAIL_FAILED:
+    return { error: true, message: action.message };
+  default:
+    return state;
   }
 };
 

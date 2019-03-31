@@ -5,7 +5,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const apiRoutes = require('./routes');
 const authRoutes = require('./routes/auth');
-const db = require('./modals/db');
+const db = require('./models/db');
 
 const { publicDir } = require('./utils/config');
 

@@ -1,6 +1,6 @@
 const crypto = require('crypto');
 const { isEmpty } = require('lodash');
-const models = require('../modals').company;
+const models = require('../models').company;
 const {
   checkUnique,
 } = require('./utils');
