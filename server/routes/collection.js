@@ -38,4 +38,15 @@ router.get('/', async (req, res) => {
     });
 });
 
+router.get('/:collectionId', async (req, res) => {
+  const { collectionId } = req.params;
+
+  const { data, message, status } = await controllers.getCollectionDetail(collectionId);
+
+  res.status(status).send({
+    data,
+    message
+  });
+});
+
 module.exports = router;

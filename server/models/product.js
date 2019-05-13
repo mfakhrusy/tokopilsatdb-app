@@ -10,6 +10,26 @@ const getAllProductId = () => {
   return utils.getColumnFromTable('product_id', tableName);
 };
 
+const getAllFilename = () => {
+  return utils.getColumnFromTable('file_name', tableName);
+};
+
+const getAllProductByCollectionId = (collectionId) => {
+  return utils.getColumnsFromTable(
+    [
+      'product_id',
+      'product_name',
+      'product_description',
+      'price',
+      'file_name',
+      'image_url',
+      'creation_date'
+    ],
+    tableName,
+    { row: 'collection_id', value: collectionId },
+  );
+};
+
 const countProductByCollectionId = async (collectionId) => {
   try {
     const result = await db.one(`SELECT count(*) FROM ${tableName} WHERE collection_id = $1`, [collectionId], res => Number(res.count));
@@ -26,6 +46,8 @@ const insertProductTable = (values) => {
 module.exports = {
   getAllId,
   getAllProductId,
+  getAllFilename,
+  getAllProductByCollectionId,
   insertProductTable,
   countProductByCollectionId,
 };

@@ -21,6 +21,7 @@ class Delimiter extends Component {
 
 Delimiter.propTypes = {
   text: PropTypes.string.isRequired,
+  navPanelIsExtended: PropTypes.bool.isRequired,
 };
 
 const mapStateToProps = (state) => {

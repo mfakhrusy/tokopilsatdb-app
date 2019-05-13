@@ -42,6 +42,7 @@ class NavigationPanel extends Component {
 
 NavigationPanel.propTypes = {
   companyDetail: PropTypes.object.isRequired,
+  isExtended: PropTypes.bool.isRequired,
 };
 
 const mapStateToProps = (state) => {

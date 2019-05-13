@@ -22,7 +22,7 @@ const getCollectionFilename = (filename) => {
 const getIdByCollectionId = async (collectionId) => {
   try {
     const result = await db.any(`SELECT id FROM ${tableName} WHERE collection_id = $1`, [collectionId]);
-    return result;
+    return result.map((item) => item.id);
   } catch(e) {
     console.log(e); // eslint-disable-line no-console
     return { status: 'error', error: true, message: 'Failed to fetch from table' };
@@ -57,6 +57,22 @@ const getCollectionList = () => {
   );
 };
 
+const getCollectionDetailByCollectionId = (collectionId) => {
+  return utils.getColumnsFromTable(
+    [
+      'collection_id',
+      'label',
+      'file_name',
+      'image_url',
+      'items_count',
+      'creation_date'
+    ],
+    tableName,
+    { row: 'collection_id', value: collectionId },
+  );
+};
+
+
 module.exports = {
   getAllId,
   getAllCollectionId,
@@ -66,4 +82,5 @@ module.exports = {
   getCollectionList,
   getIdByCollectionId,
   updateItemsCountById,
+  getCollectionDetailByCollectionId,
 };

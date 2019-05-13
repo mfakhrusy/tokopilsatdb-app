@@ -1,5 +1,7 @@
 const crypto = require('crypto');
+const { isEmpty } = require('lodash');
 const models = require ('../models').collection;
+const productModels = require('../models').product;
 const {
   checkUnique,
   generateFilename,
@@ -56,6 +58,25 @@ const generateUrl = (path) => {
   return url;
 };
 
+const getCollectionDetail = async (collectionId) => {
+
+  if (isEmpty(collectionId)) {
+    return { status: 400, message: 'Invalid collection_id' };
+  }
+
+  const id = await models.getIdByCollectionId(collectionId);
+
+  if (isEmpty(id)) {
+    return { status: 404, message: 'Collection Detail Not Found' };
+  }
+
+  const productById = await productModels.getAllProductByCollectionId(id[0]); // collection_id at product section IS the id at collection (as foreign key)
+  const collection = await models.getCollectionDetailByCollectionId(collectionId);
+  const collectionDetail = { ...collection[0], products: productById };
+
+  return { status: 200, message: 'Success get collection detail', data: collectionDetail };
+};
+
 const generateCollectionId = () => {
   const collectionId = crypto.randomBytes(12).toString('hex');
   return collectionId;
@@ -65,4 +86,5 @@ module.exports = {
   addCollection,
   getCollectionList,
   generateFilename,
+  getCollectionDetail,
 };

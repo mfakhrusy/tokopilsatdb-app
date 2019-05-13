@@ -94,6 +94,11 @@ PanelListItem.propTypes = {
   to: PropTypes.string.isRequired,
   dropdown: PropTypes.array,
   navPanelIsExtended: PropTypes.bool.isRequired,
+  location: PropTypes.object.isRequired,
+  changeLocationNavigationPanel: PropTypes.func.isRequired,
+  history: PropTypes.object.isRequired,
+  match: PropTypes.object.isRequired,
+  navPanelLocation: PropTypes.string.isRequired,
 };
 
 PanelListItem.defaultProps = {

@@ -13,7 +13,8 @@ const addProduct = async (imgFile, body, dateNow) => {
   const allProductId = await models.getAllProductId();
 
   const id = allId.length === 0 ? 1 : allId[allId.length - 1].id + 1;
-  const filename = await generateFilename(imgFile.filename);
+  let allFilename = await models.getAllFilename();
+  const filename = await generateFilename(imgFile.filename, allFilename);
   let productId = generateProductId();
   while (!checkUnique(productId, allProductId.map((item) => item.product_id))) {
     productId = generateProductId();
@@ -33,7 +34,7 @@ const addProduct = async (imgFile, body, dateNow) => {
 
   models.insertProductTable({
     id,
-    collection_id: foreignKeyCollectionId[0].id,
+    collection_id: foreignKeyCollectionId[0],
     product_id: productId,
     product_name: productName,
     product_description: productDescription,
@@ -45,7 +46,7 @@ const addProduct = async (imgFile, body, dateNow) => {
 
   // update items count on collection table
 
-  collectionModels.updateItemsCountById(foreignKeyCollectionId[0].id);
+  collectionModels.updateItemsCountById(foreignKeyCollectionId[0]);
 
   return { status: 200, message: 'Product Added Successfully' };
 };

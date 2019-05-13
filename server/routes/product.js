@@ -3,6 +3,7 @@ const mkdirp = require('mkdirp');
 const router = express.Router();
 const multer  = require('multer');
 
+const models = require('../models').product;
 const controllers = require('../controllers').product;
 
 const storage = multer.diskStorage({
@@ -12,7 +13,8 @@ const storage = multer.diskStorage({
     mkdirp(productDir, err => cb(err, productDir));
   },
   filename: async (req, file, cb) => {
-    cb(null, await controllers.generateFilename(file.originalname));
+    let allFilename = await models.getAllFilename();
+    cb(null, await controllers.generateFilename(file.originalname, allFilename));
   }
 });
 

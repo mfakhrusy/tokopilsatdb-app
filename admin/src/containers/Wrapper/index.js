@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import * as COMPANY_ACT from 'actions/company';
@@ -40,6 +41,10 @@ class Wrapper extends Component {
 
 Wrapper.propTypes = {
   auth: authTypes.isRequired,
+  getCompanyDetail: PropTypes.func.isRequired,
+  checkAuth: PropTypes.func.isRequired,
+  history: PropTypes.object.isRequired,
+  location: PropTypes.object.isRequired,
 };
 
 const mapStateToProps = (state) => {

@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 
 import * as COMPANY_ACT from 'actions/company';
+import * as COLLECTION_ACT from 'actions/collection';
 import { companyUrl } from 'config/config';
 
 import Routes from 'containers/Wrapper/routes';
@@ -13,9 +14,10 @@ import './index.scss';
 
 class Wrapper extends Component {
   componentDidMount() {
-    const { getCompanyDetail } = this.props;
+    const { getCompanyDetail, getCollectionList } = this.props;
 
     getCompanyDetail(companyUrl);
+    getCollectionList();
   }
 
   render() {
@@ -32,11 +34,13 @@ class Wrapper extends Component {
 
 Wrapper.propTypes = {
   getCompanyDetail: PropTypes.func.isRequired,
+  getCollectionList: PropTypes.func.isRequired,
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
     getCompanyDetail: (url) => dispatch(COMPANY_ACT.getCompanyDetail(url)),
+    getCollectionList: () => dispatch(COLLECTION_ACT.getCollectionList()),
   };
 };
 

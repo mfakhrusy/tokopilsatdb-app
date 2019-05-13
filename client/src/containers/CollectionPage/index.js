@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import * as COLLECTION_ACT from 'actions/collection';
 
 import { collectionListTypes } from 'utils/types';
 
@@ -10,12 +9,6 @@ import CollectionItem from 'components/CollectionItem';
 import './index.scss';
 
 class CollectionPage extends Component {
-  componentDidMount() {
-    const { getCollectionList } = this.props;
-
-    getCollectionList();
-  }
-
   render() {
     const { collectionList } = this.props;
 
@@ -25,9 +18,6 @@ class CollectionPage extends Component {
           {
             collectionList.map((collection) => (
               <CollectionItem
-                imgSrc={collection.image_url}
-                alt={collection.file_name}
-                label={collection.label}
                 collection={collection}
                 key={`collection-${collection.file_name}`}
               />
@@ -39,8 +29,7 @@ class CollectionPage extends Component {
   }
 }
 
-CollectionPage.propTypes = { // eslint-disable-line
-  getCollectionList: PropTypes.func.isRequired,
+CollectionPage.propTypes = {
   collectionList: PropTypes.arrayOf(collectionListTypes).isRequired,
 };
 
@@ -50,10 +39,4 @@ const mapStateToProps = (state) => {
   };
 };
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    getCollectionList: () => dispatch(COLLECTION_ACT.getCollectionList()),
-  };
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(CollectionPage);
+export default connect(mapStateToProps)(CollectionPage);

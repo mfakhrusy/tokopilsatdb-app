@@ -12,3 +12,9 @@ export const getCollectionList = () => (
     .then((response) => response)
     .catch((error) => ({ details: error, error: true }))
 );
+
+export const getCollectionDetail = (collectionId) => (
+  axios.get(`${apiUrl}/collection/${collectionId}`)
+    .then((response) => response)
+    .catch((error) => ({ details: error, error: true }))
+);
