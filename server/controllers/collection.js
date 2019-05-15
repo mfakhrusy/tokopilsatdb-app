@@ -45,7 +45,7 @@ const addCollection = async (imgFile, label, dateNow) => {
 const getCollectionList = async () => {
   const collectionList = await models.getCollectionList();
 
-  return { status: 200, message: 'Success get collection list', data: collectionList };
+  return { status: 200, message: 'Success get collection list', data: collectionList.map((i) => ({ ...i, id: i.collection_id })) };
 };
 
 const generateUrl = (path) => {
@@ -72,7 +72,7 @@ const getCollectionDetail = async (collectionId) => {
 
   const productById = await productModels.getAllProductByCollectionId(id[0]); // collection_id at product section IS the id at collection (as foreign key)
   const collection = await models.getCollectionDetailByCollectionId(collectionId);
-  const collectionDetail = { ...collection[0], products: productById };
+  const collectionDetail = { ...collection[0], products: productById, id: collectionId };
 
   return { status: 200, message: 'Success get collection detail', data: collectionDetail };
 };
