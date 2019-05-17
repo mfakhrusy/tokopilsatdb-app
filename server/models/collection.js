@@ -72,6 +72,9 @@ const getCollectionDetailByCollectionId = (collectionId) => {
   );
 };
 
+const removeCollection = (id) => {
+  return utils.deleteColumnFromTableById(id, tableName);
+};
 
 module.exports = {
   getAllId,
@@ -83,4 +86,5 @@ module.exports = {
   getIdByCollectionId,
   updateItemsCountById,
   getCollectionDetailByCollectionId,
+  removeCollection,
 };

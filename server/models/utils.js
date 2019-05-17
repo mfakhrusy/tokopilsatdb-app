@@ -30,8 +30,13 @@ const getColumnsFromTable = async (columnNames, tableName, filter = null) => {
   } 
 };
 
+const deleteColumnFromTableById = (id, tableName) => {
+  db.none(`DELETE FROM ${tableName} WHERE id=${id}`);
+};
+
 module.exports = {
   getColumnFromTable,
   getColumnsFromTable,
   insertTableAll,
+  deleteColumnFromTableById,
 };

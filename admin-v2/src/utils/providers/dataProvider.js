@@ -2,6 +2,7 @@ import {
   GET_LIST,
   GET_ONE,
   CREATE,
+  DELETE,
   fetchUtils,
 } from 'react-admin';
 
@@ -28,6 +29,12 @@ const convertDataProviderToRequestHTTP = (type, resource, params) => {
       },
     };
   }
+  case DELETE: {
+    return {
+      url: `${apiUrl}/${resource}/${params.id}`,
+      options: { method: 'DELETE' },
+    };
+  }
   default:
     throw new Error(`Unsupported fetch action type ${type}`);
   }
@@ -48,7 +55,6 @@ const convertHTTPResponseToDataProvider = (response, type, resource, params) => 
     };
   }
   case CREATE: {
-    console.log(json);
     return {
       data: json.data,
     };

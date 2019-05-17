@@ -12,7 +12,6 @@ const storage = multer.diskStorage({
     mkdirp(collectionDir, err => cb(err, collectionDir));
   },
   filename: async (req, file, cb) => {
-    console.log('HAHAHA');
     let allFilename = await models.getAllFilename();
     cb(null, await controllers.generateFilename(file.originalname, allFilename));
   }
@@ -21,7 +20,6 @@ const storage = multer.diskStorage({
 const upload = multer({ storage });
 
 router.post('/add', upload.single('file'), async (req, res) => {
-  console.log(req.body);
 
   const dateNow = new Date();
   const { status, message } = await controllers.addCollection(req.file, req.body.label, dateNow);
@@ -48,6 +46,17 @@ router.get('/:collectionId', async (req, res) => {
   res.status(status).send({
     data,
     message
+  });
+});
+
+router.delete('/:collectionId', async (req, res) => {
+  const { collectionId } = req.params;
+
+  const { data, message, status } = await controllers.removeCollection(collectionId);
+
+  res.status(status).send({
+    data,
+    message,
   });
 });
 

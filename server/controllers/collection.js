@@ -77,6 +77,22 @@ const getCollectionDetail = async (collectionId) => {
   return { status: 200, message: 'Success get collection detail', data: collectionDetail };
 };
 
+const removeCollection = async (collectionId) => {
+  if (isEmpty(collectionId)) {
+    return { status: 400, message: 'collection_id cannot be empty' };
+  }
+
+  const id = await models.getIdByCollectionId(collectionId);
+
+  if (isEmpty(id)) {
+    return { status: 404, message: 'collection_id not found' };
+  }
+
+  await models.removeCollection(id);
+
+  return { status: 200, messagei: 'Successfully deleted' };
+};
+
 const generateCollectionId = () => {
   const collectionId = crypto.randomBytes(12).toString('hex');
   return collectionId;
@@ -87,4 +103,5 @@ module.exports = {
   getCollectionList,
   generateFilename,
   getCollectionDetail,
+  removeCollection,
 };

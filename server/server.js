@@ -19,7 +19,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*');
   res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-Width, Content-Type, Accept, token');
-  res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT');
+  res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
   next();
 });
 app.use(express.static(path.join(__dirname, publicDir)));
