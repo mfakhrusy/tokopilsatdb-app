@@ -3,10 +3,12 @@ import {
   GET_ONE,
   CREATE,
   DELETE,
+  UPDATE,
   fetchUtils,
 } from 'react-admin';
 
 import { apiUrl } from 'config/config';
+import { underscoreCaseToCamelCase } from 'helpers/string';
 
 const convertDataProviderToRequestHTTP = (type, resource, params) => {
   switch (type) {
@@ -17,6 +19,27 @@ const convertDataProviderToRequestHTTP = (type, resource, params) => {
     return { url: `${apiUrl}/${resource}/${params.id}` };
   }
   case CREATE: {
+    const data = new FormData();
+
+    const arrData = Object.keys(params.data);
+
+    arrData.forEach((item) => {
+      if (item === 'image') {
+        data.append('file', params.data[item].rawFile);
+      } else {
+        data.append(underscoreCaseToCamelCase(item), params.data[item]);
+      }
+    });
+
+    return {
+      url: `${apiUrl}/${resource}/add`,
+      options: {
+        method: 'POST',
+        body: data,
+      },
+    };
+  }
+  case UPDATE: {
     const data = new FormData();
 
     data.append('file', params.data.image.rawFile);

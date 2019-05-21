@@ -10,7 +10,8 @@ const storage = multer.diskStorage({
   destination: (req, file, cb) => {
     const productDir = './public/files/img/product';
 
-    mkdirp(productDir, err => cb(err, productDir));
+    // eslint-disable-next-line no-octal
+    mkdirp(productDir, { mode: 0o2775 }, err => cb(err, productDir));
   },
   filename: async (req, file, cb) => {
     let allFilename = await models.getAllFilename();

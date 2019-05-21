@@ -51,6 +51,12 @@ const addProduct = async (imgFile, body, dateNow) => {
   return { status: 200, message: 'Product Added Successfully' };
 };
 
+const getProductList = async () => {
+  const productList = await models.getProductList();
+
+  return { status: 200, message: 'Success get product list', data: productList.map((i) => ({ ...i, id: i.product_id })) };
+};
+
 const generateUrl = (path) => {
   const publicDirLength = publicDir.length;
 
@@ -69,4 +75,5 @@ const generateProductId = () => {
 module.exports = {
   addProduct,
   generateFilename,
+  getProductList,
 };

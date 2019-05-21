@@ -1,4 +1,5 @@
 const crypto = require('crypto');
+const fs = require('fs');
 const { isEmpty } = require('lodash');
 const models = require ('../models').collection;
 const productModels = require('../models').product;
@@ -90,7 +91,31 @@ const removeCollection = async (collectionId) => {
 
   await models.removeCollection(id);
 
-  return { status: 200, messagei: 'Successfully deleted' };
+  const fileName = await models.getColumnByCollectionId(collectionId, 'file_name');
+
+  // remove image
+  fs.unlink(`./public/files/img/collection/${fileName}`, (err) => {
+    if (err) throw err;
+    // console.log(`./public/files/img/collection/${fileName} not found`);
+  });
+
+  return { status: 200, message: 'Successfully deleted' };
+};
+
+const updateCollection = async (collectionId) => {
+  if (isEmpty(collectionId)) {
+    return { status: 400, message: 'collection_id cannot be empty' };
+  }
+
+  const id = await models.getIdByCollectionId(collectionId);
+
+  if (isEmpty(id)) {
+    return { status: 404, message: 'collection_id not found' };
+  }
+
+  await models.updateCollection(id);
+
+  return { status: 200, message: 'collection successfully updated' };
 };
 
 const generateCollectionId = () => {
@@ -104,4 +129,5 @@ module.exports = {
   generateFilename,
   getCollectionDetail,
   removeCollection,
+  updateCollection,
 };

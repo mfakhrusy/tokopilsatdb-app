@@ -29,6 +29,16 @@ const getIdByCollectionId = async (collectionId) => {
   }
 };
 
+const getColumnByCollectionId = async (collectionId, columnName) => {
+  try {
+    const result = await db.any(`SELECT ${columnName} FROM ${tableName} WHERE collection_id = $1`, [collectionId]);
+    return result.map((item) => item[columnName]);
+  } catch(e) {
+    console.log(e); // eslint-disable-line no-console
+    return { status: 'error', error: true, message: 'Failed to fetch from table' };
+  }
+};
+
 const updateItemsCountById = async (id) => {
   try {
     const productCountById = await productModels.countProductByCollectionId(id);
@@ -72,6 +82,16 @@ const getCollectionDetailByCollectionId = (collectionId) => {
   );
 };
 
+const updateCollection = async (collectionId, image_url, label) => {
+  try {
+    await db.none(
+      `UPDATE ${tableName} SET image_url = $1, label = $2 WHERE collection_id = $3`, [image_url, label, collectionId]
+    );
+  } catch(e) {
+    return { status: 'error', error: true, message: 'Failed to fetch from table' };
+  }
+};
+
 const removeCollection = (id) => {
   return utils.deleteColumnFromTableById(id, tableName);
 };
@@ -86,5 +106,7 @@ module.exports = {
   getIdByCollectionId,
   updateItemsCountById,
   getCollectionDetailByCollectionId,
+  updateCollection,
   removeCollection,
+  getColumnByCollectionId,
 };

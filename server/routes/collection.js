@@ -9,7 +9,8 @@ const storage = multer.diskStorage({
   destination: (req, file, cb) => {
     const collectionDir = './public/files/img/collection';
 
-    mkdirp(collectionDir, err => cb(err, collectionDir));
+    // eslint-disable-next-line no-octal
+    mkdirp(collectionDir, { mode: 0777 }, err => cb(err, collectionDir));
   },
   filename: async (req, file, cb) => {
     let allFilename = await models.getAllFilename();
@@ -46,6 +47,17 @@ router.get('/:collectionId', async (req, res) => {
   res.status(status).send({
     data,
     message
+  });
+});
+
+router.put('/:collectionId', async (req, res) => {
+  const { collectionId } = req.params;
+
+  const { data, message, status } = await controllers.updateCollection(collectionId);
+
+  res.status(status).send({
+    data,
+    message,
   });
 });
 
