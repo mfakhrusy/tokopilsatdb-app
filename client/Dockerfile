@@ -11,5 +11,5 @@ RUN yarn install
 
 COPY . /srv/app/tokopilsatdb-client
 
-EXPOSE 3001
+EXPOSE 3002
 CMD [ "yarn", "start" ]

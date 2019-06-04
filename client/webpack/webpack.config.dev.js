@@ -10,7 +10,7 @@ module.exports = merge(webpackBase, {
   ],
   devServer: {
     contentBase: './build',
-    port: 3001,
+    port: 3002,
     hot: true,
     inline: true,
     historyApiFallback: true,

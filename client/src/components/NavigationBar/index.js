@@ -5,7 +5,7 @@ import './index.scss';
 
 const navbarContent = [
   { type: 'home', label: 'Home', route: '/' },
-  { type: 'collection', label: 'Collection', route: '/collection' },
+  // { type: 'collection', label: 'Collection', route: '/collection' },
   { type: 'products', label: 'Products', route: '/product' },
   { type: 'about', label: 'About', route: '/' },
   { type: 'contact', label: 'Contact', route: '/' },
