@@ -8,7 +8,7 @@
     "build": "cross-env NODE_ENV=production webpack --config webpack/webpack.config.prod.js"
   },
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "chroma-js": "^2.0.3",
     "js-cookie": "^2.2.0",
     "prop-types": "^15.7.2",
